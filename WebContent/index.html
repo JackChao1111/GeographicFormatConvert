@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>TEST</title>
+<script type="text/javascript" src="geographic-format-convert.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css"></link>
+</head>
+<body class="bg-light">
+	<div class="container">
+		<div class="col-md-8 order-md-1">
+			<h3 class="mb-3">Ascii Grid Format Transfor FEWS Grid Format.</h3>
+			<div class="mb-3">
+				<h4 class="mb-3">請先選擇欲轉換的原始坐標格式</h4>
+				<select class="custom-select d-block w-25" id="CoordFormat">
+					<option selected="selected" value="WGS 1984">WGS 1984</option>
+					<option value="TWD 1997">TWD 1997</option>
+					<option value="TWD 1967">TWD 1967</option>
+				</select>
+			</div>
+			<div class="mb-3">
+				<h4 class="mb-3">請輸入ASC座標資訊</h4>
+				<label for="country">請選擇座標點位置</label> <select
+					class="custom-select d-block w-25" id="CoordLocation">
+					<option selected="selected" value="Center">Center</option>
+					<option value="Corner">Corner</option>
+				</select>
+			</div>
+			<form class="needs-validation">
+				<div class="row">
+					<label class="col-md-2 mb-3">X:</label> <input type="text"
+						class="form-control col-md-3 mb-3 w-25" id="CoordValueX" />
+				</div>
+				<div class="row">
+					<label class="col-md-2 mb-3">Y:</label> <input type="text"
+						class="form-control col-md-3 mb-3 w-25" id="CoordValueY" />
+				</div>
+				<div class="row">
+					<label class="col-md-2 mb-3">ncols:</label> <input type="text"
+						class="form-control col-md-3 mb-3 w-25" id="NumberOfColumns" />
+				</div>
+				<div class="row">
+					<label class="col-md-2 mb-3">nrows:</label> <input type="text"
+						class="form-control col-md-3 mb-3 w-25" id="NumberOfRows" />
+				</div>
+				<div class="row">
+					<label class="col-md-2 mb-3">cellsize:</label> <input type="text"
+						class="form-control col-md-3 mb-3 w-25" id="CellSize" />
+				</div>
+			</form>
+		</div>
+		<button class="btn btn-primary btn-block w-25"
+			onclick="createXMLElement()">送出</button>
+		<div class="form-group">
+			<label for="comment">Result:</label>
+			<textarea class="form-control" cols="50" rows="10" id="XMLText"></textarea>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>TEST</title>
+<script src="/js/geographic-format-convert.js" />
+</head>
+
+<body>
+	<B><br> 請先選擇欲轉換的原始坐標格式</B>&nbsp;
+	<br>
+	<select name="CoordFormat" id="CoordFormat" class="widget"
+		style="font-size: Small;">
+		<option selected="selected" value="WGS 1984">WGS 1984</option>
+		<option value="TWD 1997">TWD 1997</option>
+		<option value="TWD 1967">TWD 1967</option>
+	</select>
+	<br />
+	<br>
+	<B>請輸入ASC座標資訊</B>
+	</br>
+	<br> 請選擇座標點位置
+	<br>
+	<select name="CoordLocation" id="CoordLocation" class="widget"
+		style="font-size: Small;">
+		<option selected="selected" value="Center">Center</option>
+		<option value="Corner">Corner</option>
+	</select>
+	<br />
+	<br>X:
+	<input name="CoordValueX" type="text" value="" size="20"
+		id="CoordValueX" style="font-size: Small;" />
+	</br>
+	<br>Y:
+	<input name="CoordValueY" type="text" value="" size="20"
+		id="CoordValueY" style="font-size: Small;" />
+	</br>
+	<br>ncols:
+	<input name="NumberOfColumns" type="text" value="" size="20"
+		id="NumberOfColumns" style="font-size: Small;" />
+	</br>
+	<br>nrows:
+	<input name="NumberOfRows" type="text" value="" size="20"
+		id="NumberOfRows" style="font-size: Small;" />
+	</br>
+	<br>cellsize:
+	<input name="CellSize" type="text" value="" size="20" id="CellSize"
+		style="font-size: Small;" />
+	</br>
+	<br />
+	<button onclick="createXMLElement()">送出</button>
+	<br />
+	<textarea name="XMLText" cols="50" rows="10" id="XMLText"></textarea>
+</body>
+</html>
